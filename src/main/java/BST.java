@@ -8,16 +8,28 @@ public class BST {
     private int size;
 
     public boolean isAVL() {
-        //TODO: implementar
-        return false;
+        //Percorrendo todo nó, verifico seus balances, não vale a pena verificar balance de folha
+        // Verifico recursivamente
+        if(isEmpty()) return true;
+        int totalBalances = 0;
+        verificaBalances(root, totalBalances);
+        if(totalBalances > (size)) return false;
+        return true;
+    }
+
+    private Node verificaBalances(Node no, int balance){
+        if (node != null) {
+            balance = balance + Math.abs(balance(no));
+            preOrder(node.left);
+            preOrder(node.right);
+        }
     }
 
     /**
      * Retorna a altura da árvore.
      */
     public int height() {
-        //TODO implementar
-        return -1;
+        return height(root);
     }
 
     /**
@@ -25,11 +37,12 @@ public class BST {
      * para recursão e para o balance.
      */
     private int height(Node node) {
-        return -1;
+        if(node == null) return -1;
+        return 1 + Math.max(height(root.left),height(root.right));
     }
 
     private int balance(Node node) {
-        return -1;
+        return height(node.left) - height(node.right);
     }
 
     /**

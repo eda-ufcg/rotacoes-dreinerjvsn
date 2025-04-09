@@ -1,8 +1,8 @@
 # Identificação
 
-* Nome: 
-* Email (@ccc): 
-* Matrícula: 
+* Nome: João Vítor de Souza Neves
+* Email (@ccc): joao.vitor.souza.neves@ccc.ufcg.edu.br
+* Matrícula: 123210233
 
 # Roteiro: isAVL
 
